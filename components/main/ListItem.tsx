@@ -6,8 +6,6 @@ interface Props {
 }
 
 export default function ListItem({ item }: Props) {
-  console.log(item);
-
   const goTargetScreen = () => {
     router.navigate({ pathname: '/detail', params: { id: item.id, name: item.name } });
   };
