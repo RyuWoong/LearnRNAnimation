@@ -3,15 +3,17 @@ import {
   Canvas,
   Circle,
   Group,
+  Image,
   Oval,
   Paint,
+  Path,
   RadialGradient,
   rotate,
   SweepGradient,
+  useImage,
   vec,
 } from '@shopify/react-native-skia';
-import { useNavigation } from 'expo-router';
-import { Dimensions, View } from 'react-native';
+import { Dimensions, useWindowDimensions, View } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
@@ -23,21 +25,25 @@ const c2 = '#60efff';
 const c3 = '#0061ff';
 
 export default function SkiaLogoAnimation() {
+  const { width, height } = useWindowDimensions();
+  const image = useImage(require('@/assets/images/splash-icon.png'));
+
   return (
     <Canvas style={{ flex: 1 }}>
-      <Circle c={center} r={25}>
-        <RadialGradient c={vec(center.x + 25, center.y)} r={50} colors={[c1, c3]} />
-      </Circle>
-      <Group color="lightblue" style="stroke" strokeWidth={18}>
-        <BlurMask style="inner" blur={12} />
-        <SweepGradient c={center} colors={[c1, c2, c3]} />
-        <Oval rect={rct} />
-        <Group transform={[{ rotate: Math.PI / 3 }]} origin={center}>
-          <Oval rect={rct} />
-        </Group>
-        <Group transform={[{ rotate: -Math.PI / 3 }]} origin={center}>
-          <Oval rect={rct} />
-        </Group>
+      <Path
+        path="M 200 200 L 261.8 331.7 L 400 352.9 L 300 455.3 L 331.7 593.2 L 200 655 L 68.3 593.2 L 100 455.3 L 0 352.9 L 138.2 331.7 L 200 200 Z"
+        color="lightblue"
+        style="stroke"
+        strokeWidth={10}
+        strokeJoin="round"
+      />
+      <Group
+        invertClip
+        clip={
+          'M 200 200 L 261.8 331.7 L 400 352.9 L 300 455.3 L 331.7 593.2 L 200 655 L 68.3 593.2 L 100 455.3 L 0 352.9 L 138.2 331.7 L 200 200 Z'
+        }
+      >
+        <Image image={image} fit="cover" x={0} y={0} width={width} height={height} />
       </Group>
     </Canvas>
   );

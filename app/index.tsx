@@ -6,7 +6,9 @@ const list = [
   { id: 1, name: 'Bouncy Onboarding' },
   { id: 2, name: 'Circular Onboarding' },
   { id: 3, name: 'LLM Animation' },
-  { id: 4, name: 'Skia Logo Animation' },
+  { id: 4, name: 'React Logo Animation' },
+  { id: 5, name: 'Clip Image' },
+  { id: 6, name: 'Skia Logo Animation' },
 ];
 
 export default function HomeScreen() {

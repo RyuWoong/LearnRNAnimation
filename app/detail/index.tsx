@@ -1,4 +1,4 @@
-import { SkiaLogoAnimation, LLMAnimation } from '@/components/page';
+import { SkiaLogoAnimation, LLMAnimation, ReactLogoAnimation, ClipImage } from '@/components/page';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 
@@ -13,7 +13,9 @@ export default function DetailScreen() {
         }}
       />
       {id === '3' && <LLMAnimation />}
-      {id === '4' && <SkiaLogoAnimation />}
+      {id === '4' && <ReactLogoAnimation />}
+      {id === '5' && <ClipImage />}
+      {id === '6' && <SkiaLogoAnimation />}
     </View>
   );
 }
