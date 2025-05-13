@@ -32,7 +32,7 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false, headerTitle: 'Home' }} />
         <Stack.Screen name="+not-found" />
-        <Stack.Screen name="detail" options={{ headerTitle: '' }} />
+        <Stack.Screen name="detail/index" options={{ headerTitle: '' }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

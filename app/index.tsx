@@ -8,7 +8,10 @@ const list = [
   { id: 3, name: 'LLM Animation' },
   { id: 4, name: 'React Logo Animation' },
   { id: 5, name: 'Clip Image' },
-  { id: 6, name: 'Skia Logo Animation' },
+  { id: 6, name: 'Hue' },
+  { id: 7, name: 'Skia Logo Animation' },
+  { id: 8, name: 'Chasing Bubbles' },
+  { id: 9, name: 'Arc Slider' },
 ];
 
 export default function HomeScreen() {
