@@ -6,6 +6,9 @@ import {
   Hue,
   ChasingBubbles,
   ArcSlider,
+  Loader,
+  BlurCard,
+  TracingPath,
 } from '@/components/page';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
@@ -27,6 +30,9 @@ export default function DetailScreen() {
       {id === '7' && <SkiaLogoAnimation />}
       {id === '8' && <ChasingBubbles />}
       {id === '9' && <ArcSlider />}
+      {id === '10' && <Loader />}
+      {id === '11' && <BlurCard />}
+      {id === '12' && <TracingPath />}
     </View>
   );
 }

@@ -1,4 +1,4 @@
-import { Canvas, Circle, Path, polar2Canvas, Rect, Skia } from '@shopify/react-native-skia';
+import { BlurMask, Canvas, Circle, Path, polar2Canvas, Rect, Skia } from '@shopify/react-native-skia';
 import { Dimensions, Image, StyleSheet, View } from 'react-native';
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';
 import Animated, { useAnimatedStyle, useSharedValue } from 'react-native-reanimated';
@@ -19,7 +19,8 @@ function ArcSlider() {
   const x2 = center - r * Math.cos(endAngle);
   const y2 = -r * Math.sin(endAngle) + center;
 
-  const backgroundPath = `M ${x1} ${y1} A ${r} ${r} 0 1 0 ${x2} ${y2}`;
+  // const backgroundPath = `M ${x1} ${y1} A ${r} ${r} 0 1 0 ${x2} ${y2}`;
+  const backgroundPath = `M ${x2} ${y2} A ${r} ${r} 1 0 1 ${x1} ${y1}`;
   const foregroundPath = `M ${x2} ${y2} A ${r} ${r} 1 0 1 ${x1} ${y1}`;
   const skiaBackgroundPath = Skia.Path.MakeFromSVGString(backgroundPath);
   const skiaForegroundPath = Skia.Path.MakeFromSVGString(foregroundPath);

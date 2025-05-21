@@ -12,6 +12,9 @@ const list = [
   { id: 7, name: 'Skia Logo Animation' },
   { id: 8, name: 'Chasing Bubbles' },
   { id: 9, name: 'Arc Slider' },
+  { id: 10, name: 'Loader' },
+  { id: 11, name: 'Blur Card' },
+  { id: 12, name: 'Tracing Path' },
 ];
 
 export default function HomeScreen() {
