@@ -6,6 +6,15 @@ const list = [
   { id: 1, name: 'Bouncy Onboarding' },
   { id: 2, name: 'Circular Onboarding' },
   { id: 3, name: 'LLM Animation' },
+  { id: 4, name: 'React Logo Animation' },
+  { id: 5, name: 'Clip Image' },
+  { id: 6, name: 'Hue' },
+  { id: 7, name: 'Skia Logo Animation' },
+  { id: 8, name: 'Chasing Bubbles' },
+  { id: 9, name: 'Arc Slider' },
+  { id: 10, name: 'Loader' },
+  { id: 11, name: 'Blur Card' },
+  { id: 12, name: 'Tracing Path' },
 ];
 
 export default function HomeScreen() {
@@ -15,7 +24,6 @@ export default function HomeScreen() {
         <Text>50-Days-React-Native</Text>
       </View>
       <FlatList
-        style={{ flex: 1, backgroundColor: 'yellow' }}
         data={list}
         keyExtractor={({ id }) => `list-${id}`}
         renderItem={ListItem}
@@ -26,9 +34,11 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  Container: { flex: 1 },
+  Container: { flex: 1, backgroundColor: 'white' },
   Header: {
     padding: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: 'gray',
   },
   ContentContainStyle: { gap: 2 },
 });
