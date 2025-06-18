@@ -15,6 +15,8 @@ const list = [
   { id: 10, name: 'Loader' },
   { id: 11, name: 'Blur Card' },
   { id: 12, name: 'Tracing Path' },
+  { id: 13, name: 'Multi Slider' },
+  { id: 14, name: 'Focus Scroll' },
 ];
 
 export default function HomeScreen() {

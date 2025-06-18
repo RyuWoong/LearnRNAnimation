@@ -9,6 +9,8 @@ import {
   Loader,
   BlurCard,
   TracingPath,
+  MultiSlider,
+  FocusScroll,
 } from '@/components/page';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
@@ -33,6 +35,8 @@ export default function DetailScreen() {
       {id === '10' && <Loader />}
       {id === '11' && <BlurCard />}
       {id === '12' && <TracingPath />}
+      {id === '13' && <MultiSlider />}
+      {id === '14' && <FocusScroll />}
     </View>
   );
 }

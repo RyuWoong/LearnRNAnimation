@@ -8,3 +8,5 @@ export { default as ArcSlider } from './ArcSlider';
 export { default as Loader } from './Loader';
 export { default as BlurCard } from './BlurCard';
 export { default as TracingPath } from './TracingPath';
+export { default as MultiSlider } from './MultiSlider';
+export { default as FocusScroll } from './FocusScroll';
