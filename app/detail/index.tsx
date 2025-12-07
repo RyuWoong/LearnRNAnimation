@@ -12,6 +12,7 @@ import {
   MultiSlider,
   FocusScroll,
 } from '@/components/page';
+import AnimateText from '@/components/page/AnimateText';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 
@@ -37,6 +38,7 @@ export default function DetailScreen() {
       {id === '12' && <TracingPath />}
       {id === '13' && <MultiSlider />}
       {id === '14' && <FocusScroll />}
+      {id === '15' && <AnimateText />}
     </View>
   );
 }

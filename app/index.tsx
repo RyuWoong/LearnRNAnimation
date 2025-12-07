@@ -17,6 +17,7 @@ const list = [
   { id: 12, name: 'Tracing Path' },
   { id: 13, name: 'Multi Slider' },
   { id: 14, name: 'Focus Scroll' },
+  { id: 15, name: 'Animate Text' },
 ];
 
 export default function HomeScreen() {
